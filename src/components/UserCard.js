@@ -37,12 +37,12 @@ export default function UserCard({ user }) {
           </Typography>
           <Typography variant="body2">company: {company.name}</Typography>
         </CardContent>
-        <CardActions>
-          <a href={website} size="small">
-            Vist Website
-          </a>
-        </CardActions>
       </CardActionArea>
+      <CardActions>
+        <a href={website} size="small">
+          Vist Website
+        </a>
+      </CardActions>
     </Card>
   );
 }
