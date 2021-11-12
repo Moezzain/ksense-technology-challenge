@@ -1,25 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
-import { Router, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import "assets/scss/material-kit-react.scss?v=1.9.0";
+// import "assets/scss/material-kit-react.scss?v=1.9.0";
 
 // pages for this product
-import DataTables from "views/DataTablesPage";
+import UserPage from "views/UsersPage";
+import UserPost from "views/UserPost";
 
 var hist = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={hist}>
-    <Switch>
-      <Route
-        exact
-        path="/"
-        render={() => <Redirect to="/data-tables-page" />}
-      />
-      <Route path="/data-tables-page" component={DataTables} />
-    </Switch>
+    <Routes>
+      <Route path="/" element={<UserPage />} />
+      <Route path="/user/:id" element={<UserPost />} />
+    </Routes>
   </Router>,
+  // <Router history={hist}>
+  //   <Route path="/" component={DataTables} />
+  // </Router>,
   document.getElementById("root")
 );
