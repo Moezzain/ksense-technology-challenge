@@ -39,7 +39,7 @@ export default function UserCard({ user }) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <a href={website} size="small">
+        <a href={"http://" + website} size="small">
           Vist Website
         </a>
       </CardActions>
